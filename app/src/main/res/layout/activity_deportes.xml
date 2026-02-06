@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Deportes">
+
+    <TextView
+        android:id="@+id/tvQuererVer2"
+        android:layout_width="361dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="112dp"
+        android:text="¿Que tipo de deportes quiere ver?"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/cbFutbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="114dp"
+        android:text="Fútbol"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvQuererVer2" />
+
+    <CheckBox
+        android:id="@+id/cbMotoGP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="29dp"
+        android:text="Moto GP"
+        android:textSize="34sp"
+        app:layout_constraintStart_toEndOf="@+id/cbFormula1"
+        app:layout_constraintTop_toBottomOf="@+id/cbCiclismo" />
+
+    <CheckBox
+        android:id="@+id/cbTenis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="29dp"
+        android:text="Tenis"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbFutbol" />
+
+    <CheckBox
+        android:id="@+id/cbRugby"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="29dp"
+        android:text="Rugby"
+        android:textSize="34sp"
+        app:layout_constraintStart_toEndOf="@+id/cbBoxeo"
+        app:layout_constraintTop_toBottomOf="@+id/cbAtletismo" />
+
+    <CheckBox
+        android:id="@+id/cbCiclismo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="29dp"
+        android:text="Ciclismo"
+        android:textSize="34sp"
+        app:layout_constraintStart_toEndOf="@+id/cbTenis"
+        app:layout_constraintTop_toBottomOf="@+id/cbBaloncesto" />
+
+    <CheckBox
+        android:id="@+id/cbBoxeo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="29dp"
+        android:text="Boxeo"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbAtletismo" />
+
+    <CheckBox
+        android:id="@+id/cbAtletismo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="29dp"
+        android:text="Atletismo"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbFormula1" />
+
+    <CheckBox
+        android:id="@+id/cbBaloncesto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="114dp"
+        android:text="Baloncesto"
+        android:textSize="34sp"
+        app:layout_constraintStart_toEndOf="@+id/cbFutbol"
+        app:layout_constraintTop_toBottomOf="@+id/tvQuererVer2" />
+
+    <CheckBox
+        android:id="@+id/cbFormula1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="29dp"
+        android:text="Fórmula 1"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbTenis" />
+
+    <CheckBox
+        android:id="@+id/cbGolf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="29dp"
+        android:text="Golf"
+        android:textSize="34sp"
+        app:layout_constraintStart_toEndOf="@+id/cbAtletismo"
+        app:layout_constraintTop_toBottomOf="@+id/cbMotoGP" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:text="Continuar"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbRugby"
+        app:rippleColor="@color/design_default_color_secondary" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

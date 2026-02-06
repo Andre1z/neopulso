@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- MENU BAR / TOOLBAR -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:title="NeoPulso"
+        android:backgroundTint="?attr/colorPrimary"
+        app:titleTextColor="@android:color/white"
+        android:background="@color/mi_color_toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvVer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="¿Que quiere ver?"
+        android:textColor="#008080"
+        android:textSize="34sp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="80dp"/>
+
+    <Button
+        android:id="@+id/btnNoticias"
+        android:layout_width="278dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="44dp"
+        android:backgroundTint="#9030FF"
+        android:text="NOTICIAS"
+        android:textSize="48sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvVer" />
+
+    <Button
+        android:id="@+id/btnDeportes"
+        android:layout_width="288dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="76dp"
+        android:backgroundTint="@android:color/holo_purple"
+        android:text="DEPORTES"
+        android:textSize="48sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnNoticias" />
+
+    <Button
+        android:id="@+id/btnVerficadas"
+        android:layout_width="288dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="76dp"
+        android:text="VERIFICADAS"
+        android:textSize="38sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDeportes" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

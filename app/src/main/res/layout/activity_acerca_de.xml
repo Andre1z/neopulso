@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AcercaDe">
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="179dp"
+        android:layout_height="163dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/neopulso1" />
+
+    <LinearLayout
+        android:layout_width="411dp"
+        android:layout_height="534dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="17dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5">
+
+        <TextView
+            android:id="@+id/tvAcercaDe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Acerca de Neopulso"
+            android:textAlignment="center"
+            android:textSize="34sp" />
+
+        <TextView
+            android:id="@+id/tvAcerca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Neo Pulso te permite seguir noticias y tendencias en tiempo real, filtradas según tus intereses, para ofrecerte información clara y fiable sobre lo que pasa en el mundo." />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/tvAvisoLegal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aviso Legal"
+            android:textAlignment="center"
+            android:textSize="34sp" />
+
+        <TextView
+            android:id="@+id/tvLegal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Neo Pulso es una aplicación destinada únicamente a fines informativos y no garantiza la veracidad absoluta, actualidad o exhaustividad de las noticias mostradas, aunque se esfuerza por ofrecer información clara y contrastada para reducir la presencia de noticias falsas. El usuario es el único responsable del uso que haga de la información ofrecida en la aplicación y de cualquier decisión tomada a partir de ella. Neo Pulso no se hace responsable de los contenidos, enlaces externos o servicios de terceros que puedan aparecer en la app, ni de posibles daños derivados de su uso inadecuado." />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

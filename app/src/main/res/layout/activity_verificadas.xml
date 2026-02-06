@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainVerificadas"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Verificadas">
+
+    <TextView
+        android:id="@+id/tvNoticiasVerificadasMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="Noticias Verificadas"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNoticiasVerificadasMain">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- 1. Bulo: Tecnología -->
+            <LinearLayout
+                android:id="@+id/itemBuloTecnologia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvBuloTecnologiaTitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="BULO — FALSO: Nueva app que carga el móvil en 30 segundos"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <ImageView
+                    android:id="@+id/ivBuloTecnologia"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Ilustración tecnología"
+                    android:src="@drawable/movil" />
+
+                <TextView
+                    android:id="@+id/tvBuloTecnologiaDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Se difundió que una aplicación permite cargar cualquier teléfono en 30 segundos sin hardware adicional. Verificación: falso. No existe ninguna aplicación capaz de cargar un teléfono en 30 segundos sin hardware específico; la afirmación carece de base tecnológica real."
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="2dp" />
+
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="12dp" />
+
+            <!-- 2. Bulo: Salud -->
+            <LinearLayout
+                android:id="@+id/itemBuloSalud"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvBuloSaludTitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="BULO — FALSO: Beber agua de lluvia cura resfriados"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <ImageView
+                    android:id="@+id/ivBuloSalud"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Ilustración salud"
+                    android:src="@drawable/lluvia" />
+
+                <TextView
+                    android:id="@+id/tvBuloSaludDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Circuló un mensaje que recomienda beber agua de lluvia para curar resfriados. Verificación: falso. El agua de lluvia no cura resfriados y puede contener contaminantes; no es segura ni tiene respaldo médico como tratamiento."
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="2dp" />
+
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="12dp" />
+
+            <!-- 3. Bulo: Sociedad -->
+            <LinearLayout
+                android:id="@+id/itemBuloSociedad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvBuloSociedadTitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="BULO — FALSO: Multas automáticas por no saludar al vecino"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <ImageView
+                    android:id="@+id/ivBuloSociedad"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Ilustración sociedad"
+                    android:src="@drawable/multa" />
+
+                <TextView
+                    android:id="@+id/tvBuloSociedadDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Se viralizó que una ordenanza municipal imponía multas por no saludar a los vecinos. Verificación: falso. No existe ninguna ordenanza municipal que imponga multas por no saludar; es un contenido falso sin base legal."
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="2dp" />
+
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="12dp" />
+
+            <!-- 4. Bulo: Cultura -->
+            <LinearLayout
+                android:id="@+id/itemBuloCultura"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvBuloCulturaTitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="BULO — FALSO: Museo regala cuadros originales a visitantes"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <ImageView
+                    android:id="@+id/ivBuloCultura"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Ilustración cultura"
+                    android:src="@drawable/museo" />
+
+                <TextView
+                    android:id="@+id/tvBuloCulturaDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Un post afirmaba que un museo local regalaba cuadros originales a los primeros visitantes del día. Verificación: falso. No existe evidencia de que el museo regale obras originales; la afirmación surgió como una broma en redes sociales."
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="2dp" />
+
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="12dp" />
+
+            <!-- 5. Bulo: Internacional -->
+            <LinearLayout
+                android:id="@+id/itemBuloInternacional"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvBuloInternacionalTitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="BULO — FALSO: Francia prohíbe el uso de paraguas en la vía pública"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <ImageView
+                    android:id="@+id/ivBuloInternacional"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Ilustración internacional"
+                    android:src="@drawable/paraguas" />
+
+                <TextView
+                    android:id="@+id/tvBuloInternacionalDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Se compartió que un país vecino había prohibido los paraguas por razones estéticas. Verificación: falso. No hay registro oficial ni fuente confiable que respalde esa supuesta prohibición; se trata de una noticia falsa."
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="2dp" />
+
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="12dp" />
+
+            <!-- 6. Bulo: Ciencia -->
+            <LinearLayout
+                android:id="@+id/itemBuloCiencia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvBuloCienciaTitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="BULO — FALSO: Científicos crean planta que camina"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <ImageView
+                    android:id="@+id/ivBuloCiencia"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Ilustración ciencia"
+                    android:src="@drawable/planta" />
+
+                <TextView
+                    android:id="@+id/tvBuloCienciaDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Un titular viral afirmaba que un laboratorio había creado una planta capaz de desplazarse. Verificación: falso. No existe evidencia científica de una planta creada en laboratorio capaz de desplazarse; la historia fue inventada como contenido de prueba o bulo."
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="2dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

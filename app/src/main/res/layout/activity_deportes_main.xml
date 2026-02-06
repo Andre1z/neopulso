@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Deportes_main">
+
+    <TextView
+        android:id="@+id/tvNoticiasDeportivas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="24dp"
+        android:text="Noticias Deportivas"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvNoticiasDeportivas"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Fútbol -->
+            <LinearLayout
+                android:id="@+id/itemFutbol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvFutbolTitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Derbi de la ciudad termina con empate y polémica arbitral"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <ImageView
+                    android:id="@+id/ivFutbol"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Balón de fútbol"
+                    android:src="@drawable/futbol" />
+
+                <TextView
+                    android:id="@+id/tvFutbolDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="El clásico local concluyó 1-1 tras una segunda parte intensa y una decisión arbitral discutida.\n\nAmbos equipos dispusieron de ocasiones claras; el empate deja la liga abierta y provoca debate entre aficionados y técnicos. El entrenador local destacó la actitud del equipo y pidió calma mientras se revisan las jugadas polémicas.\n\nLa jornada deja a los dos aspirantes separados por un punto y con la vista puesta en la próxima fecha."
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="2dp" />
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="12dp" />
+
+            <!-- Baloncesto -->
+            <LinearLayout
+                android:id="@+id/itemBaloncesto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvBaloncestoTitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Victoria en la prórroga impulsa al equipo local"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <ImageView
+                    android:id="@+id/ivBaloncesto"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Canasta y balón"
+                    android:src="@drawable/baloncesto" />
+
+                <TextView
+                    android:id="@+id/tvBaloncestoDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Un triple en la prórroga decidió un partido vibrante ante más de 5.000 espectadores.\n\nEl equipo mostró carácter defensivo y aprovechó errores rivales en los minutos finales. El entrenador elogió la concentración y anunció rotaciones para la próxima semana.\n\nLa victoria refuerza la moral y mantiene vivas las opciones de playoff."
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="2dp" />
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="12dp" />
+
+            <!-- Tenis -->
+            <LinearLayout
+                android:id="@+id/itemTenis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvTenisTitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Promesa local avanza a cuartos en el torneo sobre tierra"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <ImageView
+                    android:id="@+id/ivTenis"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Pelota y raqueta en pista de tierra"
+                    android:src="@drawable/tenis" />
+
+                <TextView
+                    android:id="@+id/tvTenisDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="El joven tenista local superó en tres sets a un rival de mayor ranking y se cita en cuartos.\n\nLa solidez desde el fondo y el saque le permitieron remontar un primer set adverso. El entrenador destaca la progresión técnica y la gestión mental en puntos clave.\n\nLa afición espera una nueva jornada histórica en el torneo."
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="2dp" />
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="12dp" />
+
+            <!-- Ciclismo -->
+            <LinearLayout
+                android:id="@+id/itemCiclismo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvCiclismoTitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Escapada triunfa en etapa montañosa y cambia la general"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <ImageView
+                    android:id="@+id/ivCiclismo"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Bicicleta de carretera"
+                    android:src="@drawable/ciclismo" />
+
+                <TextView
+                    android:id="@+id/tvCiclismoDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Una fuga de tres corredores llegó en solitario a meta tras una jornada de alta montaña.\n\nEl vencedor atacó en el último puerto y resistió en el descenso; la general sufre cambios y los equipos ya planifican la contrarrespuesta. El director deportivo valoró la valentía de la escapada.\n\nLa etapa deja espectáculo y una clasificación más abierta."
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="2dp" />
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="12dp" />
+
+            <!-- Fórmula 1 -->
+            <LinearLayout
+                android:id="@+id/itemFormula1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvFormula1Titulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Carrera en Monza deja a la escudería líder con ventaja"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <ImageView
+                    android:id="@+id/ivFormula1"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Coche de Fórmula 1 en pista"
+                    android:src="@drawable/formula1" />
+
+                <TextView
+                    android:id="@+id/tvFormula1Desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="La escudería dominó la carrera con una estrategia de dos paradas que resultó decisiva.\n\nEl piloto ganador gestionó neumáticos y tráfico con maestría; la clasificación del campeonato se aprieta y las próximas pistas serán clave. Ingenieros analizan datos para optimizar rendimiento.\n\nLa temporada entra en su fase decisiva con rivalidades intensas."
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="2dp" />
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="12dp" />
+
+            <!-- MotoGP -->
+            <LinearLayout
+                android:id="@+id/itemMotoGP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvMotoGPTitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Victoria en MotoGP tras una remontada espectacular"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <ImageView
+                    android:id="@+id/ivMotoGP"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Imagen MotoGP"
+                    android:src="@drawable/motogp" />
+
+                <TextView
+                    android:id="@+id/tvMotoGPDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Una salida complicada no impidió la remontada del piloto que cruzó primero la línea de meta.\n\nLa carrera estuvo marcada por adelantamientos y gestión de neumáticos; el equipo celebró la estrategia y la puesta a punto de la moto. Aficionados destacaron la emoción en las curvas finales.\n\nEl resultado refuerza la candidatura del piloto en la lucha por el título."
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="2dp" />
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="12dp" />
+
+            <!-- Atletismo -->
+            <LinearLayout
+                android:id="@+id/itemAtletismo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvAtletismoTitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Récord local en pista en la prueba de velocidad"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <ImageView
+                    android:id="@+id/ivAtletismo"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Corredor en pista"
+                    android:src="@drawable/atletismo" />
+
+                <TextView
+                    android:id="@+id/tvAtletismoDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="El atleta local batió la plusmarca regional en una final electrizante.\n\nLa preparación y la técnica en la salida marcaron la diferencia; entrenadores resaltan la disciplina y el plan de entrenamiento. La marca abre puertas a competiciones internacionales.\n\nLa actuación inspira a jóvenes deportistas de la región."
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="2dp" />
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="12dp" />
+
+            <!-- Golf -->
+            <LinearLayout
+                android:id="@+id/itemGolf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvGolfTitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Par perfecto en el hoyo 18 decide el torneo local"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <ImageView
+                    android:id="@+id/ivGolf"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Pelota de golf en tee"
+                    android:src="@drawable/golf" />
+
+                <TextView
+                    android:id="@+id/tvGolfDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Un putt decisivo en el último hoyo otorgó el título al jugador favorito.\n\nLa calma y la precisión en los golpes cortos fueron determinantes; el ganador dedicó la victoria a su equipo técnico. El torneo reunió a amateurs y profesionales en un fin de semana soleado.\n\nLa victoria refuerza la trayectoria del jugador en el circuito regional."
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="2dp" />
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="12dp" />
+
+            <!-- Boxeo -->
+            <LinearLayout
+                android:id="@+id/itemBoxeo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvBoxeoTitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Noche de boxeo termina con nocaut en el tercer asalto"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <ImageView
+                    android:id="@+id/ivBoxeo"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Boxeador en el ring"
+                    android:src="@drawable/boxeo" />
+
+                <TextView
+                    android:id="@+id/tvBoxeoDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Un potente gancho lateral puso fin al combate y desató la euforia en el pabellón.\n\nEl púgil dominante impuso ritmo y conectó combinaciones que desgastaron a su rival; el equipo médico confirmó la buena recuperación del derrotado. Promotores ya negocian la próxima velada.\n\nEl nocaut consolida la reputación del vencedor en la categoría."
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="2dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

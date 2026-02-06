@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Noticias_main">
+
+    <TextView
+        android:id="@+id/tvNoticiasMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="Las Noticias"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNoticiasMain">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- 1. Política / Patrimonio: Edificio institucional -->
+            <LinearLayout
+                android:id="@+id/itemNoticiaPolitica"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvNoticiaPoliticaTitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Plan de restauración para edificio histórico que acoge oficinas públicas"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <ImageView
+                    android:id="@+id/ivNoticiaPolitica"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Fachada edificio institucional"
+                    android:src="@drawable/mocloa" />
+
+                <TextView
+                    android:id="@+id/tvNoticiaPoliticaDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="El ayuntamiento presenta un proyecto para restaurar y adaptar un edificio clásico a usos administrativos y culturales.\n\nEl proyecto contempla rehabilitación de fachadas, mejora de accesos y eficiencia energética, además de espacios para exposiciones y actividades ciudadanas. Se prevé financiación mixta y participación de expertos en patrimonio. Vecinos y colectivos culturales han sido convocados a mesas de trabajo para definir usos.\n\nLa intervención busca conservar el valor histórico del inmueble y potenciar su uso público."
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="2dp" />
+
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="12dp" />
+
+            <!-- 2. Economía: Símbolo euro frente al banco -->
+            <LinearLayout
+                android:id="@+id/itemNoticiaEconomia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvNoticiaEconomiaTitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Autoridad monetaria anuncia medidas para contener la volatilidad en la eurozona"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <ImageView
+                    android:id="@+id/ivNoticiaEconomia"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Escultura euro frente a edificio financiero"
+                    android:src="@drawable/eurobce" />
+
+                <TextView
+                    android:id="@+id/tvNoticiaEconomiaDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="El organismo responsable de la política monetaria ha presentado medidas temporales para asegurar liquidez y estabilidad.\n\nEntre las acciones anunciadas figuran líneas de liquidez dirigidas a bancos y facilidades para mercados interbancarios. El objetivo es reducir picos de volatilidad y mantener el flujo de crédito a empresas. Economistas piden coordinación con políticas fiscales para maximizar el efecto.\n\nEl seguimiento de los indicadores macro determinará si se requieren pasos adicionales en las próximas semanas."
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="2dp" />
+
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="12dp" />
+
+            <!-- 3. Sociedad: Barrio residencial denso -->
+            <LinearLayout
+                android:id="@+id/itemNoticiaSS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvNoticiaSSTitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Campaña vecinal impulsa mejoras en barrios de alta densidad"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <ImageView
+                    android:id="@+id/ivNoticiaSS"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Bloques de viviendas"
+                    android:src="@drawable/mariola" />
+
+                <TextView
+                    android:id="@+id/tvNoticiaSSDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Vecinos organizan una iniciativa para mejorar limpieza, iluminación y zonas comunes en manzanas con alta ocupación.\n\nLa campaña incluye jornadas de limpieza, propuestas para optimizar rutas de recogida de residuos y la creación de microespacios verdes en patios y azoteas. Las asociaciones piden al ayuntamiento más puntos limpios y un plan de rehabilitación de fachadas. Se prevén reuniones técnicas para priorizar actuaciones por zonas.\n\nLos residentes esperan que las medidas mejoren la calidad de vida y fomenten la convivencia en el barrio."
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="2dp" />
+
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="12dp" />
+
+            <!-- 4. Cultural: Auditorio / Teatro -->
+            <LinearLayout
+                android:id="@+id/itemNoticiaCultural"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvNoticiaCulturalTitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="El auditorio municipal reabre con una temporada centrada en música y teatro"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <ImageView
+                    android:id="@+id/ivNoticiaCultural"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Interior auditorio"
+                    android:src="@drawable/teatro" />
+
+                <TextView
+                    android:id="@+id/tvNoticiaCulturalDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Tras meses de obras, el auditorio recupera su actividad con conciertos, ciclos de danza y teatro familiar.\n\nLa programación combina producciones locales con compañías invitadas y ciclos didácticos para escuelas. Se han mejorado accesos, acústica e iluminación; además se han reservado butacas para programas sociales y descuentos para jóvenes. La dirección anuncia talleres y encuentros con artistas para acercar la escena a nuevos públicos.\n\nLa reapertura busca revitalizar la vida cultural y convertir el auditorio en un polo de actividad comunitaria."
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="2dp" />
+
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="12dp" />
+
+            <!-- 5. Internacional: Monumento / Palacio -->
+            <LinearLayout
+                android:id="@+id/itemNoticiaInternacional"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvNoticiaInternacionalTitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Actos oficiales y ceremonias marcan la agenda en el país del norte"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <ImageView
+                    android:id="@+id/ivNoticiaInternacional"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Edificio monumental con retratos"
+                    android:src="@drawable/palaciosol" />
+
+                <TextView
+                    android:id="@+id/tvNoticiaInternacionalDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="El país celebra actos en lugares emblemáticos mientras la comunidad internacional sigue de cerca sus movimientos diplomáticos.\n\nLas ceremonias oficiales han coincidido con declaraciones y maniobras que mantienen la atención regional. Observadores destacan el papel simbólico de estos actos en la política interna y su impacto en la percepción exterior. Analistas subrayan la necesidad de diálogo para reducir tensiones.\n\nLa evolución de la situación dependerá de los próximos gestos diplomáticos y de la respuesta de actores internacionales."
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="2dp" />
+
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="12dp" />
+
+            <!-- 6. Ciencia y Salud: Ilustración de virus -->
+            <LinearLayout
+                android:id="@+id/itemNoticiaCT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvNoticiaCTTitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nuevos avances en investigación virológica prometen mejoras en vacunas"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <ImageView
+                    android:id="@+id/ivNoticiaCT"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Ilustración de virus"
+                    android:src="@drawable/vacuna" />
+
+                <TextView
+                    android:id="@+id/tvNoticiaCTDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Equipos científicos publican resultados prometedores sobre nuevas plataformas vacunales en fase preclínica.\n\nLos estudios muestran mejoras en la respuesta inmune y en la estabilidad de formulaciones experimentales. Investigadores subrayan la necesidad de ensayos clínicos para confirmar seguridad y eficacia; las instituciones sanitarias mantienen protocolos de vigilancia y colaboración internacional.\n\nSi los ensayos confirman los hallazgos, las innovaciones podrían reforzar la preparación frente a futuras amenazas virales."
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="2dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
