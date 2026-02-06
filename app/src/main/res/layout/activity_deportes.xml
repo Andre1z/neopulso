@@ -7,6 +7,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Deportes">
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        app:title="Deportes"
+        app:titleTextColor="@color/toolbar_text"
+        app:popupTheme="@style/ToolbarPopupTheme"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/tvQuererVer2"
