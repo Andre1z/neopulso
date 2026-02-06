@@ -1,9 +1,16 @@
 package com.example.neopulso
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
-import android.view.View
+import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import androidx.core.content.ContextCompat
+import androidx.core.graphics.drawable.DrawableCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.neopulso.databinding.ActivityVerificadasBinding
@@ -13,15 +20,91 @@ class Verificadas : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
         binding = ActivityVerificadasBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Mostrar todos los items
-        binding.itemBuloTecnologia.visibility = View.VISIBLE
-        binding.itemBuloSalud.visibility = View.VISIBLE
-        binding.itemBuloSociedad.visibility = View.VISIBLE
-        binding.itemBuloCultura.visibility = View.VISIBLE
-        binding.itemBuloInternacional.visibility = View.VISIBLE
-        binding.itemBuloCiencia.visibility = View.VISIBLE
+        // Conectar toolbar (asegúrate de tener <MaterialToolbar android:id="@+id/toolbar"> en el layout)
+        try {
+            setSupportActionBar(binding.toolbar)
+        } catch (e: Exception) {
+            Log.w("Verificadas", "binding.toolbar no encontrado, intentando findViewById", e)
+            val tb = findViewById<Toolbar?>(R.id.toolbar)
+            tb?.let { setSupportActionBar(it) }
+        }
+
+        // Edge-to-edge insets
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.mainVerificadas)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
+
+        // Mostrar todos los items (según tu layout)
+        binding.itemBuloTecnologia.visibility = android.view.View.VISIBLE
+        binding.itemBuloSalud.visibility = android.view.View.VISIBLE
+        binding.itemBuloSociedad.visibility = android.view.View.VISIBLE
+        binding.itemBuloCultura.visibility = android.view.View.VISIBLE
+        binding.itemBuloInternacional.visibility = android.view.View.VISIBLE
+        binding.itemBuloCiencia.visibility = android.view.View.VISIBLE
+
+        // Forzar color del título y del overflow icon si ya existe
+        val textColor = ContextCompat.getColor(this, R.color.toolbar_text)
+        try {
+            binding.toolbar.setTitleTextColor(textColor)
+        } catch (e: Exception) {
+            Log.w("Verificadas", "No se pudo setTitleTextColor en toolbar", e)
+        }
+        binding.toolbar.overflowIcon?.let { DrawableCompat.setTint(it, textColor) }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        Log.d("Verificadas", "onCreateOptionsMenu called")
+        menuInflater.inflate(R.menu.main_menu, menu)
+
+        // Aplicar tint a iconos del menú y al overflow icon después de inflar
+        val textColor = ContextCompat.getColor(this, R.color.toolbar_text)
+        binding.toolbar.overflowIcon?.let { DrawableCompat.setTint(it, textColor) }
+
+        binding.toolbar.menu?.let { m ->
+            for (i in 0 until m.size()) {
+                val mi = m.getItem(i)
+                mi.icon?.let { icon ->
+                    val wrapped = DrawableCompat.wrap(icon)
+                    DrawableCompat.setTint(wrapped, textColor)
+                    mi.icon = wrapped
+                }
+            }
+        }
+
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.menu_about -> {
+                startActivity(Intent(this, AcercaDe::class.java))
+                true
+            }
+            R.id.menu_contacto -> {
+                startActivity(Intent(this, Contacto::class.java))
+                true
+            }
+            R.id.menu_cerrar_sesion -> {
+                cerrarSesion()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    private fun cerrarSesion() {
+        val prefs = getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
+        prefs.edit().clear().apply()
+        // Si usas Firebase: FirebaseAuth.getInstance().signOut()
+
+        val intent = Intent(this, login::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        startActivity(intent)
     }
 }
