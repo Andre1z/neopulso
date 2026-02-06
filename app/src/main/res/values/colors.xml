@@ -3,4 +3,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="mi_color_toolbar">#6200EE</color>
+    <color name="toolbar_accent">#1E88E5</color>
+    <color name="toolbar_text">#000000</color>
 </resources>
