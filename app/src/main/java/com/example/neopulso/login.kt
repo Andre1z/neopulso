@@ -48,7 +48,7 @@ class login : AppCompatActivity() {
             }
         }
         binding.btnRegistrate.setOnClickListener { startActivity(Intent(this, Registro::class.java)) }
-        binding.btnAcerca.setOnClickListener { startActivity(Intent(this, AcercaDe::class.java)) }
-        binding.btnContacto.setOnClickListener { startActivity(Intent(this, Contacto::class.java)) }
+        //binding.btnAcerca.setOnClickListener { startActivity(Intent(this, AcercaDe::class.java)) }
+        //binding.btnContacto.setOnClickListener { startActivity(Intent(this, Contacto::class.java)) }
     }
 }
